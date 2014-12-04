@@ -1,0 +1,595 @@
+/* GLOBAL STYLES
+    -------------------------------------------------- */
+@font-face {
+    font-family: 'capture_it';
+    src: url('../fonts/capture_it-webfont.eot');
+    src: url('../fonts/capture_it-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/capture_it-webfont.woff') format('woff'),
+         url('../fonts/capture_it-webfont.ttf') format('truetype'),
+         url('../fonts/capture_it-webfont.svg#capture_itregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'caviar_dreams';
+    src: url('../fonts/caviar_dreams_bold-webfont.eot');
+    src: url('../fonts/caviar_dreams_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/caviar_dreams_bold-webfont.woff') format('woff'),
+         url('../fonts/caviar_dreams_bold-webfont.ttf') format('truetype'),
+         url('../fonts/caviar_dreams_bold-webfont.svg#caviar_dreamsbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'caviar_dreams';
+    src: url('../fonts/caviardreams-webfont.eot');
+    src: url('../fonts/caviardreams-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/caviardreams-webfont.woff') format('woff'),
+         url('../fonts/caviardreams-webfont.ttf') format('truetype'),
+         url('../fonts/caviardreams-webfont.svg#caviar_dreamsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+    /* Padding below the footer and lighter body text */
+
+    html {
+      
+    }
+
+    body {
+      background: #f7f6f6 url('../img/k2w-bg.jpg');
+      padding-bottom: 40px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+    }
+
+    input, button, select, textarea {
+      font-family: 'caviar_dreams', sans-serif;
+    }
+
+    a {
+      font-weight: bold;
+    }
+
+    .muted {
+      color: #404040;
+    }
+
+    .green {
+      color: #1d4a06;
+      font-weight: bold;
+    }
+
+
+
+    /* CUSTOMIZE THE NAVBAR
+    -------------------------------------------------- */
+
+    /* Special class on .container surrounding .navbar, used for positioning it into place. */
+    .navbar-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      margin-top: 0;
+      margin-bottom: -70px; /* Negative margin to pull up carousel. 70px is roughly margins and height of navbar. */
+    }
+    .navbar-wrapper .navbar-inner {
+      background-color: #b3771a;
+      background-image: -moz-linear-gradient(top, #f7f6f6, #ccc);
+      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f7f6f6), to(#ccc));
+      background-image: -webkit-linear-gradient(top, #f7f6f6, #ccc);
+      background-image: -o-linear-gradient(top, #f7f6f6, #ccc);
+      background-image: linear-gradient(to bottom, #f7f6f6, #ccc);
+      background-repeat: repeat-x;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff7f6f6', endColorstr='#ffcccccc', GradientType=0);
+      border: 1px solid #212121;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+      -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+    }
+
+    .navbar-inverse .navbar-inner {
+      background-color: #404040;
+      background-image: -moz-linear-gradient(top, #404040, #303030);
+      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#404040), to(#303030));
+      background-image: -webkit-linear-gradient(top, #404040, #303030);
+      background-image: -o-linear-gradient(top, #404040, #303030);
+      background-image: linear-gradient(to bottom, #404040, #303030);
+      background-repeat: repeat-x;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff404040', endColorstr='#ff303030', GradientType=0);
+      border-color: #505050;
+    }
+
+    /* Remove border and change up box shadow for more contrast */
+    .navbar .navbar-inner {
+      height: 56px;
+      min-height: 56px;
+      border: 0;
+      -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+         -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+              box-shadow: 0 2px 10px rgba(0,0,0,.25);
+    }
+
+    /* Downsize the brand/project name a bit */
+    .navbar .brand {
+      margin: 0 20px; /* Make it match navbar links */
+      padding:0;
+      width: 161px;
+      height: 56px;
+      background: url('../img/knees2war-logo-01.png') center no-repeat;
+    }
+
+    /* Navbar links: increase padding for taller navbar */
+    .navbar .nav > li > a {
+      padding: 18px 15px;
+      font-weight:bold;
+      color: #404040;
+      text-shadow: 0 1px 0 #f7f6f6;
+    }
+
+    .navbar .nav .active>a, 
+    .navbar .nav .active>a:hover, 
+    .navbar .nav .active>a:focus {
+      color: #404040;
+      background-color: #ccc;
+      text-shadow: 0 1px 0 #f7f6f6;
+    }
+
+    /* Offset the responsive button for proper vertical alignment*/ 
+    .navbar .btn-navbar {
+      margin-top: 0;
+      background: none !important;
+      border: none;
+      box-shadow: none;
+    }
+
+    /* And offset the span containing the responsive button */
+    .navbar .btn-link {
+      margin-top: 5px;
+    }
+
+    /* Hide the overflow-y on the modal boxes to hide extra content */
+    .no-scroll {
+      overflow-y: hidden;
+    }
+
+    /*Remove the List Style Type */
+    .no-list-type {
+      list-style-type: none;
+      text-align: left;
+      margin: 15px 0;
+    }
+
+    /*Reset the btn-link color */
+    .btn-link {
+      color: #404040;
+      font-weight: bold;
+      text-shadow: 0 -1px 0 rgba(0,0,0,0.25)
+    }
+    .btn-link:hover, .btn-link:focus {
+      color: #ff9c00;
+    }
+
+
+
+    /* CUSTOMIZE THE CAROUSEL
+    -------------------------------------------------- */
+
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 60px;
+    }
+
+    .carousel .container {
+      position: relative;
+      z-index: 9;
+    }
+
+    .carousel-control {
+      height: 80px;
+      margin-top: 0;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      background-color: transparent;
+      border: 0;
+      z-index: 10;
+    }
+
+    .carousel .item {
+      height: 500px;
+    }
+    .carousel img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 1500px;
+      height: 500px;
+    }
+
+    .carousel-caption {
+      background-color: transparent;
+      position: static;
+      max-width: 650px;
+      padding: 0 20px 0 60px;
+      margin-top: 150px;
+    }
+
+    .carousel-caption h1,
+    .carousel-caption .lead,
+    .aside .lead {
+      margin: 0;
+      line-height: 1.25;
+      color: #fff;
+      text-shadow: 1px 1px 3px rgba(0,0,0,.8);
+      font-weight: bold;
+    }
+    .carousel-caption .btn {
+      margin-top: 10px;
+    }
+
+    #ministry .carousel-inner {
+      width: 900px;
+      height:500px;
+    }
+    #ministry img {
+      min-width: 100%;
+    }
+
+    /* ministryCarousel Customizations */
+
+    #ministryCarousel {
+      max-width: 900px;
+      height: 500px;
+      margin: 20px auto;
+    }
+
+    #galleryCarousel .carousel-inner,
+    #galleryCarousel .carousel-inner item {
+      min-width: 900px;
+      height: 559px;
+    }
+
+    .carousel-indicators {
+      position: absolute;
+      top: auto;
+      bottom: 15px;
+      left: 15px;
+      margin: 0 auto;
+    }
+
+    .carousel-indicators li {
+      background-color: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+    }
+
+    /* Add Responsiveness to the Carousels */
+    @media (max-width: 1200px) {
+      .carousel .item {
+        height: 400px;
+      }
+      .carousel img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 1200px;
+        height: 400px;
+      }
+      .carousel-caption {
+        padding: 0 20px 0 40px;
+      }
+      #ministryCarousel {
+        width: 720px;
+        height: 400px;
+      }
+      #ministry .carousel-inner {
+        width: 720px;
+      }
+    }
+
+    @media (max-width: 960px) {
+      .carousel .item {
+        height: 320px;
+      }
+      .carousel img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 960px;
+        height: 320px;
+      }
+      .carousel-caption {
+        padding: 0 20px;
+        margin-top: 110px;
+      }
+      #ministryCarousel {
+        width: 576px;
+        height: 320px;
+      }
+      #ministry .carousel-inner {
+        width: 576px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .carousel .item {
+        height: 300px;
+      }
+      .carousel img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 900px;
+        height: 300px;
+      }
+      .carousel-caption {
+        padding: 0 20px;
+        margin-top: 100px;
+      }
+      #ministryCarousel {
+        width: 540px;
+        height: 300px;
+      }
+      #ministry .carousel-inner {
+        width: 540px;
+      }
+    }
+
+
+    /* MARKETING CONTENT
+    -------------------------------------------------- */
+
+    /* Center align the text */
+    .center {
+      text-align: center;
+    }
+    .marketing h2 {
+      font-weight: normal;
+    }
+    .marketing .span4 p {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+
+    /* Featurettes
+    ------------------------- */
+
+    .featurette-divider {
+      margin: 80px 0; /* Space out the Bootstrap <hr> more */
+      border-top: 1px solid #cccccc;
+      clear:both; /* Just to make sure we're not mixing the oil with the water */
+    }
+    .medium-divider {
+      margin: 60px 0 30px; /* Space out the Bootstrap <hr> more (but less than above) */
+    }
+    .featurette {
+      padding-top: 60px; /* Vertically center images part 1: add padding above and below text. */
+      overflow: hidden; /* Vertically center images part 2: clear their floats. */
+    }
+    .featurette-image {
+      /*margin-top: -120px; Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+    }
+
+    /* Mission Accomplished Overlays */
+    .race-info {
+      z-index: 900;
+    }
+    .race-info ul.no-list-type li {
+      text-align: center;
+    }
+    .race-info img {
+      max-width: 45%;
+    }
+    .race-info img:nth-child(odd) {
+      float: left;
+    }
+    .race-info img:nth-child(even) {
+      float: right;
+    }
+    .accomplished-black {
+      background: url('../img/missionaccomplished_black.png') no-repeat center center;
+      background-size: contain;
+      max-width: 100%;
+      z-index: 999;
+    }
+    .accomplished-green {
+      background: url('../img/missionaccomplished_green.png') no-repeat center center;
+      background-size: contain;
+      max-width: 100%;
+      z-index: 999;
+    }
+    .accomplished-grey {
+      background: url('../img/missionaccomplished_grey.png') no-repeat center center;
+      background-size: contain;
+      max-width: 100%;
+      z-index: 999;
+    }
+    .accomplished-yellow {
+      background: url('../img/missionaccomplished_yellow.png') no-repeat center center;
+      background-size: contain;
+      max-width: 100%;
+      z-index: 999;
+    }
+
+    /* Customize the aside for the Mission section */
+    .aside {
+      background: url('../img/aside-bg2.jpg') 10% center no-repeat;
+      background-size: cover;
+      max-width: 100%;
+      padding: 120px 0 10px;
+    }
+
+    .aside .lead {
+      line-height: 1;
+      text-shadow: 2px 2px 5px rgba(0,0,0,.9);
+    }
+
+    /* Give some space on the sides of the floated elements so text doesn't run right into it. */
+    .featurette-image.pull-left {
+      margin-right: 40px;
+    }
+    .featurette-image.pull-right {
+      margin-left: 40px;
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      color: #ff9c00;
+      font-size: 50px;
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+    .bottom-twenty {
+      margin-bottom: 20px;
+    }
+
+    #contact {
+      padding-top: 0;
+    }
+
+    /* Give the video thumbnails a slight hover effect */
+    #videos img:hover {
+      opacity: 0.8;
+    }
+
+    /* Modal Customizations
+    ------------------------- */
+    .modal {
+       -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+      border-radius: 4px;
+    }
+
+
+    /* RESPONSIVE CSS
+    -------------------------------------------------- */
+
+    @media (max-width: 1400px) and (min-width: 1220px) {
+      .merch-slide {
+        left: -80px !important;
+      }
+    }
+
+    @media (max-width: 979px) {
+
+      .nav {
+        background-color: #f7f6f6;
+        border-radius: 4px;
+         -webkit-box-shadow: 0 3px 8px rgba(0,0,0,0.125);
+         -moz-box-shadow: 0 3px 8px rgba(0,0,0,0.125);
+        box-shadow: 0 3px 8px rgba(0,0,0,0.125);
+      }
+      .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+      }
+      .navbar-inner {
+        border-radius: 4px;
+        margin: 0;
+        height: auto;
+      }
+      .navbar .nav .active>a,
+      .navbar .nav .active>a:hover,
+      .navbar .nav .active>a:focus {
+        color: #404040;
+        text-shadow: 0 1px 0 #f7f6f6;
+      }
+
+      .featurette {
+        height: auto;
+        padding: 0;
+      }
+      .featurette-image.pull-left,
+      .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 40%;
+        margin: 0 auto 20px;
+      }
+
+      #galleryCarousel {
+        max-width: 800px;
+        height:497px;
+        margin-right:auto;
+        margin-left:auto;
+      }
+
+      #galleryCarousel .carousel-inner,
+      #galleryCarousel .carousel-inner > li {
+        min-width: 800px;
+        height:497px;
+      }
+    }
+
+
+    @media (max-width: 767px) {
+
+      .navbar-inner {
+        margin: 0 -20px;
+        height: auto;
+      }
+      .navbar .nav > li > a {
+        padding: 12px 15px;
+      }
+
+      .carousel {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+      .carousel .container {
+
+      }
+      .carousel .item {
+        height: 300px;
+      }
+      .carousel img {
+        height: 300px;
+      }
+      .carousel-caption {
+        width: 65%;
+        padding: 0 70px;
+        margin-top: 100px;
+      }
+      .carousel-caption h1 {
+        font-size: 30px;
+      }
+      .carousel-caption .lead,
+      .carousel-caption .btn {
+        font-size: 18px;
+      }
+
+      .marketing .span4 + .span4 {
+        margin-top: 40px;
+      }
+
+      .featurette-heading {
+        font-size: 30px;
+      }
+      .featurette .lead {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      #galleryCarousel {
+        max-width: 500px;
+        height:311px;
+        margin-right:auto;
+        margin-left:auto;
+      }
+
+      #galleryCarousel .carousel-inner,
+      #galleryCarousel .carousel-inner > li {
+        min-width: 500px;
+        height:311px;
+      }
+    }
